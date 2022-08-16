@@ -65,7 +65,7 @@ export default {
             const storage = firebase.storage()
             const ref = storage.ref(`contracts/${id}/${folderName}/${data[name]}`)
             const urlFile = 'url' + name
-            await ref.getDownloadURL().then(url => data.[urlFile] = url)
+            await ref.getDownloadURL().then(url => data[urlFile] = url)
         },
         async change({commit}, [payload, fieldName, id]){
             try {
